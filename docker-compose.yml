@@ -1,0 +1,71 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    apache:
+      build: .docker/apache
+      container_name: project4_apache
+      working_dir: /var/www/project4
+      volumes:
+        - .:/var/www/project4
+        - .docker/load:/var/lib/mysql-files
+      labels:
+        - traefik.backend=apache
+        - traefik.project4.frontend.rule=Host:${SITE_URL}
+
+    php-fpm:
+      build: .docker/php-fpm
+      container_name: project4_php-fpm
+      working_dir: /var/www/project4
+      volumes:
+        - .:/var/www/project4
+        - .docker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+
+    mysql:
+      image: mysql:8.0
+      container_name: project4_mysql
+      volumes:
+        - .docker/data/db:/var/lib/mysql
+      command:
+        - "--default-authentication-plugin=mysql_native_password"
+        - "--lower_case_table_names=1"
+      labels:
+        - traefik.enable=false
+      environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_DATABASE: ${DB_NAME}
+        MYSQL_USER: ${DB_USERNAME}
+        MYSQL_PASSWORD: ${DB_PASSWORD}
+
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      labels:
+        - traefik.backend=phpmyadmin
+        - traefik.project4.frontend.rule=Host:${PHPMYADMIN_URL}
+      environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+      links:
+        - mysql
+
+    traefik:
+      image: traefik:latest
+#      command: --docker --logLevel=ERROR
+      command: --api --docker --logLevel=ERROR
+      restart: unless-stopped
+      ports:
+        - "8090:80"
+        - "8088:8080"
+      labels:
+        - traefik.enable=false
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock:ro
+
+    maildev:
+      image: djfarrelly/maildev
+      container_name: project4_maildev
+      ports:
+        - 9009:80
+
