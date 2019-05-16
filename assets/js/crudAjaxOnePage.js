@@ -41,16 +41,16 @@ $(document).on('click','.btn-save',function (e) {
         success: function (data)
         {
             if(data.data.type != 'add'){
-                $('#line-'+data.data.id+' #td-lastName').html(data.data.lastName);
-                $('#line-'+data.data.id+' #td-firstName').html(data.data.firstName);
-                $('#line-'+data.data.id+' #td-birthDate').html(data.data.birthDate);
-                $('#line-'+data.data.id+' #td-ville').html(data.data.ville);
+                $('tr#line-'+data.data.id+' > td:nth-child(1)').html(data.data.lastName);
+                $('tr#line-'+data.data.id+' > td:nth-child(2)').html(data.data.firstName);
+                $('tr#line-'+data.data.id+' > td:nth-child(3)').html(data.data.birthDate);
+                $('tr#line-'+data.data.id+' > td:nth-child(4)').html(data.data.ville);
             }else{
                 var markup = "<tr id='line-"+data.data.id+"' role='row'>"+
-                    "<td id='td-lastName'>"+data.data.lastName+"</td>"+
-                    "<td id='td-firstName'>"+data.data.firstName+"</td>"+
-                    "<td id='td-birthDate'>"+data.data.birthDate+"</td>"+
-                    "<td id='td-ville'>"+data.data.ville+"</td>"+
+                    "<td>"+data.data.lastName+"</td>"+
+                    "<td>"+data.data.firstName+"</td>"+
+                    "<td>"+data.data.birthDate+"</td>"+
+                    "<td>"+data.data.ville+"</td>"+
                     "<td> <button type='button' class='btn btn-default btn-edit' id='"+data.data.id+"'>"+
                     "<i class='fa fa-edit'></i> </button>"+
                     "<button type='button' class='btn btn-default btn-remove' id='"+data.data.id+"'>" +
@@ -188,7 +188,10 @@ function deleteCampaign(id)
     var data = {
         'idContact': id,
     };
+    $( "#dialog-confirm" ).removeClass('hidden');
 
+    var info = $('tr#line-'+id+' > td:nth-child(1)').html()+' '+$('tr#line-'+id+' > td:nth-child(2)').html();
+    $('#infoLine').html(info);
     $( "#dialog-confirm" ).dialog({
         resizable: false,
         height: "auto",

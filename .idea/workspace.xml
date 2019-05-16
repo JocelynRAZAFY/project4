@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29ff1e8-0a52-4e80-8bb5-80b1aa994589" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/load.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manager/CrudOnePageManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager/CrudOnePageManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/crudAjaxOnePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/crudAjaxOnePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,20 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/crudAjaxOnePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/load.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="442">
+              <caret line="208" column="73" lean-forward="true" selection-start-line="208" selection-start-column="73" selection-end-line="208" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -95,8 +84,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="59" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="59" />
+            <state relative-caret-position="472">
+              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,6 +120,10 @@
       <find>ui-icon-alert</find>
       <find>line</find>
       <find>getAllContact</find>
+      <find>dialog-confirm</find>
+      <find>dialog-contact</find>
+      <find>btn-remove</find>
+      <find>td-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,12 +161,12 @@
         <option value="$PROJECT_DIR$/assets/css/app.css" />
         <option value="$PROJECT_DIR$/src/Controller/CrudOnePageController.php" />
         <option value="$PROJECT_DIR$/templates/crud_one_page/home.html.twig" />
-        <option value="$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig" />
         <option value="$PROJECT_DIR$/templates/crud_one_page/block/formCrud.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/crudAjaxOnePage.js" />
         <option value="$PROJECT_DIR$/src/Manager/CrudOnePageManager.php" />
         <option value="$PROJECT_DIR$/src/Repository/ContactRepository.php" />
         <option value="$PROJECT_DIR$/assets/js/load.js" />
+        <option value="$PROJECT_DIR$/assets/js/crudAjaxOnePage.js" />
+        <option value="$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig" />
       </list>
     </option>
   </component>
@@ -374,12 +370,12 @@
       <workItem from="1557645861434" duration="18993000" />
       <workItem from="1557666279942" duration="20665000" />
       <workItem from="1557919832507" duration="13273000" />
-      <workItem from="1557991739486" duration="1910000" />
+      <workItem from="1557991739486" duration="5440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79724000" />
+    <option name="totallyTimeSpent" value="83254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -703,20 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crud_one_page/block/formCrud.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manager/CrudOnePageManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1552">
@@ -724,13 +706,6 @@
           <folding>
             <element signature="e#116#139#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/crudAjaxOnePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -743,8 +718,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/load.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="345">
+          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crud_one_page/block/formCrud.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/crud_one_page/block/tableCrud.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/crudAjaxOnePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="208" column="73" lean-forward="true" selection-start-line="208" selection-start-column="73" selection-end-line="208" selection-end-column="73" />
         </state>
       </provider>
     </entry>

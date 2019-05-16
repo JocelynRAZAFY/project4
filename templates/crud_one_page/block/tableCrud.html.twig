@@ -23,10 +23,10 @@
                     <tbody>
                     {% for contact in contact.getAllContact %}
                         <tr id="line-{{ contact.id }}">
-                            <td id="td-lastName">{{ contact.lastName }}</td>
-                            <td id="td-firstName">{{ contact.firstName }}</td>
-                            <td id="td-birthDate">{{ contact.birthDate }}</td>
-                            <td id="td-ville">{{ contact.ville }}</td>
+                            <td>{{ contact.lastName }}</td>
+                            <td>{{ contact.firstName }}</td>
+                            <td>{{ contact.birthDate }}</td>
+                            <td>{{ contact.ville }}</td>
                             <td>
                                 <div class="form-group">
                                     <button type="button" class="btn btn-default btn-edit" id="{{ contact.id }}">
@@ -58,7 +58,9 @@
     <div class="hidden" id="dialog-confirm" title="Suppression de contact">
         <p>
             <span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span>
-            Etes-vous sur de vouloir supprimer cette ligne ?</p>
+            Etes-vous sur de vouloir supprimer cette ligne ?
+            <p id="infoLine"></p>
+        </p>
     </div>
     <!-- /.col -->
 </div>
