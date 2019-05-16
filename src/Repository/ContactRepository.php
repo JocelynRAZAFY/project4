@@ -33,7 +33,7 @@ class ContactRepository extends ServiceEntityRepository
     public function getAllContact()
     {
         $contacts = [];
-        foreach ($this->findAll() as $contact){
+        foreach ($this->findBy([],['id' => 'DESC']) as $contact){
             $contacts[] = [
                 'id' => $contact->getId(),
                 'lastName' => $contact->getLastName(),

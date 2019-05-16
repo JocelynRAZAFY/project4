@@ -8,7 +8,6 @@
 
 namespace App\Manager;
 
-
 use App\Entity\Contact;
 use App\Repository\ContactRepository;
 use App\Repository\VilleRepository;
@@ -25,8 +24,21 @@ class CrudOnePageManager extends BaseManager
      */
     private $villeRepository;
 
+    /**
+     * @var ContactRepository
+     */
     private $contactRepository;
 
+    /**
+     * CrudOnePageManager constructor.
+     * @param EntityManagerInterface $em
+     * @param ContainerInterface $container
+     * @param RequestStack $requestStack
+     * @param SessionInterface $session
+     * @param LoggerInterface $logger
+     * @param VilleRepository $villeRepository
+     * @param ContactRepository $contactRepository
+     */
     public function __construct(
         EntityManagerInterface $em,
         ContainerInterface $container,
@@ -42,6 +54,11 @@ class CrudOnePageManager extends BaseManager
         parent::__construct($em, $container, $requestStack, $session, $logger);
     }
 
+    /**
+     * Mise à jour de one page
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @throws \Exception
+     */
     public function updateOnePage()
     {
         $ville = $this->villeRepository->find((int)explode('-',$this->data->ville)[1]);
@@ -71,6 +88,10 @@ class CrudOnePageManager extends BaseManager
         return $this->success($result);
     }
 
+    /**
+     * listes des régions, départements, villes
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
     public function getRegionDepartementVille()
     {
         $results = $this->villeRepository->getRegionDepartementVille($this->data);
@@ -78,6 +99,10 @@ class CrudOnePageManager extends BaseManager
         return $this->success($results);
     }
 
+    /**
+     * Détail de contact sélectionné
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
     public function getDetail()
     {
         $result = [];
@@ -109,6 +134,10 @@ class CrudOnePageManager extends BaseManager
         return $this->success($result);
     }
 
+    /**
+     * Suppression
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     */
     public function deleteContact()
     {
         $contact = $this->contactRepository->find($this->data->idContact);
