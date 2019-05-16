@@ -92,6 +92,9 @@ $(document).on('click','.btn-edit',function (e) {
         idContact: $(this).attr('id')
     };
 
+    $('table tr').removeClass('odd');
+    $('table tr').removeClass('selected-line');
+    $('tr#line-'+data.idContact).addClass('selected-line');
     $('.btn-save').html('Modifier la ligne');
     $.ajax({
         type: "POST",

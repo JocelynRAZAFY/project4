@@ -36,6 +36,9 @@ $(document).ready(function(){
                 'autoWidth'   : false
             });
             require('./crudAjaxOnePage');
+
+        case 'add_collection':
+            require('./collection');
         default:
 
     }
