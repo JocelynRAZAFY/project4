@@ -10,11 +10,12 @@ function deleteCollection(id)
     var data = {
         'id': id,
     };
-    $( "#deleteCollection" ).removeClass('hidden');
+    $( "#dialogCollection" ).removeClass('hidden');
 
     var info = $('tr#line-'+id+' > td:nth-child(1)').html();
 
     $('#infoCollection').html(info);
+
     $( "#dialogCollection" ).dialog({
         resizable: false,
         height: "auto",
