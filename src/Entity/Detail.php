@@ -27,9 +27,9 @@ class Detail
     private $lastName;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Group", inversedBy="detail")
+     * @ORM\ManyToOne(targetEntity="Family", inversedBy="detail")
      */
-    private $group;
+    private $family;
 
     public function getId(): ?int
     {
@@ -60,15 +60,16 @@ class Detail
         return $this;
     }
 
-    public function getGroup(): ?Group
+    public function getFamily(): ?Family
     {
-        return $this->group;
+        return $this->family;
     }
 
-    public function setGroup(?Group $group): self
+    public function setFamily(?Family $family): self
     {
-        $this->group = $group;
+        $this->family = $family;
 
         return $this;
     }
+    
 }

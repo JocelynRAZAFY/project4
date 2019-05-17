@@ -15,10 +15,10 @@ class DetailType extends AbstractType
     {
         $builder
             ->add('lastName',TextType::class,[
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Votre nom']
             ])
             ->add('firstName',TextType::class,[
-                'attr' => ['class' => 'form-control']
+                'attr' => ['class' => 'form-control', 'placeholder' => 'Votre prénom']
             ])
         ;
     }
@@ -28,5 +28,10 @@ class DetailType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Detail::class,
         ]);
+    }
+
+    public function getBlockPrefix()
+    {
+        return 'DetailType';
     }
 }

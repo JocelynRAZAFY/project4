@@ -38,7 +38,22 @@ $(document).ready(function(){
             require('./crudAjaxOnePage');
 
         case 'add_collection':
-            require('./collection');
+            require('../collection/bootstrap-submenu.js');
+            require('../collection/jquery.domajax.js');
+            require('../collection/highlight.min.js');
+            require('../collection/jquery.collection.js');
+            require('../collection/mycollection.js');
+
+        case 'edit_collection':
+            require('../collection/bootstrap-submenu.js');
+            require('../collection/jquery.domajax.js');
+            require('../collection/highlight.min.js');
+            require('../collection/jquery.collection.js');
+            require('../collection/mycollection.js');
+
+        case 'list_collection':
+            require('./myjs');
+
         default:
 
     }

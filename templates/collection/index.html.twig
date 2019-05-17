@@ -11,4 +11,12 @@
     {% if app.request.attributes.get('_route') == 'add_collection' %}
         {% include'collection/addCollection.html.twig' %}
     {% endif %}
+
+    {% if app.request.attributes.get('_route') == 'edit_collection' %}
+        {% include'collection/addCollection.html.twig' %}
+    {% endif %}
+
+    {% if app.request.attributes.get('_route') == 'list_collection' %}
+        {% include'collection/listCollection.html.twig' %}
+    {% endif %}
 {% endblock %}

@@ -7,7 +7,7 @@
                 <img src="{{ asset('img/jocelyn.jpg') }}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+                <p>Jocelyn RAZ</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -34,6 +34,19 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="active"><a href="{{ path('crud_one_page') }}"><i class="fa fa-circle-o"></i>Crud ajax</a></li>
+                    {#<li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>#}
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Collection Forms</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="active"><a href="{{ path('add_collection') }}"><i class="fa fa-plus"></i>Ajout collection</a></li>
+                    <li><a href="{{ path('list_collection') }}"><i class="fa fa-list"></i>list collection</a></li>
                     {#<li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>#}
                 </ul>
             </li>

@@ -146,8 +146,13 @@ $(document).on('click','.btn-edit',function (e) {
         $('#firstName').val("");
         $('#birthDate').val("");
         $('#birthDate').val("");
+
         removeAllOptionsExceptFirst("departement");
         removeAllOptionsExceptFirst("ville");
+
+        $('html, body').stop().animate({
+            scrollTop: $("#onePage").offset().top
+        }, 1000);
     });
 });
 

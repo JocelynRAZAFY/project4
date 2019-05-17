@@ -23,7 +23,7 @@ abstract class BaseManager
     /**
      * @var EntityManagerInterface
      */
-    private $em;
+    protected $em;
 
     /**
      * @var ContainerInterface

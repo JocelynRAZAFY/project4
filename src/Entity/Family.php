@@ -7,9 +7,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\GroupRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\FamilyRepository")
  */
-class Group
+class Family
 {
     /**
      * @ORM\Id()
@@ -24,7 +24,7 @@ class Group
     private $label;
 
     /**
-     * @ORM\OneToMany(targetEntity="Detail", mappedBy="group")
+     * @ORM\OneToMany(targetEntity="Detail", mappedBy="family", cascade={"persist","remove"})
      */
     private $detail;
 
@@ -62,7 +62,7 @@ class Group
     {
         if (!$this->detail->contains($detail)) {
             $this->detail[] = $detail;
-            $detail->setGroup($this);
+            $detail->setFamily($this);
         }
 
         return $this;
@@ -73,8 +73,8 @@ class Group
         if ($this->detail->contains($detail)) {
             $this->detail->removeElement($detail);
             // set the owning side to null (unless already changed)
-            if ($detail->getGroup() === $this) {
-                $detail->setGroup(null);
+            if ($detail->getFamily() === $this) {
+                $detail->setFamily(null);
             }
         }
 
