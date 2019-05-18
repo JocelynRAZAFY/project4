@@ -23,6 +23,7 @@ $(document).ready(function(){
             require('../../lte/bower_components/bootstrap-daterangepicker/daterangepicker.js');
             require('../../lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js');
             require('../../lte/dist/js/pages/dashboard.js');
+            break;
 
         case 'crud_one_page':
             require('../../lte/bower_components/datatables.net/js/jquery.dataTables.min.js');
@@ -36,23 +37,29 @@ $(document).ready(function(){
                 'autoWidth'   : false
             });
             require('./crudAjaxOnePage');
+            break;
 
         case 'add_collection':
-            require('../collection/bootstrap-submenu.js');
-            require('../collection/jquery.domajax.js');
-            require('../collection/highlight.min.js');
-            require('../collection/jquery.collection.js');
-            require('../collection/mycollection.js');
-
         case 'edit_collection':
             require('../collection/bootstrap-submenu.js');
             require('../collection/jquery.domajax.js');
             require('../collection/highlight.min.js');
             require('../collection/jquery.collection.js');
             require('../collection/mycollection.js');
+            break;
 
         case 'list_collection':
             require('./myjs');
+            break;
+
+        case 'add_tag':
+        case 'edit_tag':
+        case 'list_article':
+            require('../tagsinput/src/bootstrap-tagsinput.css');
+            require('../tagsinput/src/bootstrap-tagsinput');
+           Bloodhound = require('../tagsinput/dist/typeahead.bundle');
+            require('./tags-input');
+            break;
 
         default:
 

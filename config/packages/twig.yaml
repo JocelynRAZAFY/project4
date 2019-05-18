@@ -5,3 +5,4 @@ twig:
     globals:
       ville: '@App\Repository\VilleRepository'
       contact: '@App\Repository\ContactRepository'
+      article: '@App\Manager\TagsManager'

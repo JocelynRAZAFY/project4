@@ -64,6 +64,18 @@
                     {% endif %}
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>Tag</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ path('add_tag') }}"><i class="fa fa-sign-out"></i>add Tag</a></li>
+                    <li class="active"><a href="{{ path('list_article') }}"><i class="fa fa-sign-in"></i>List article</a></li>
+                </ul>
+            </li>
             {#<li class="treeview">#}
                 {#<a href="#">#}
                     {#<i class="fa fa-files-o"></i>#}

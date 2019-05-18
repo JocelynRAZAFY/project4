@@ -1,8 +1,6 @@
 $(document).on('click','.btn-remove-collection',function (e) {
     e.preventDefault();
     deleteCollection($(this).attr('id'));
-
-    // console.log($(this).attr('id'))
 });
 
 function deleteCollection(id)
