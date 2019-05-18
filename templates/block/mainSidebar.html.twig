@@ -47,7 +47,21 @@
                 <ul class="treeview-menu">
                     <li class="active"><a href="{{ path('add_collection') }}"><i class="fa fa-plus"></i>Ajout collection</a></li>
                     <li><a href="{{ path('list_collection') }}"><i class="fa fa-list"></i>list collection</a></li>
-                    {#<li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>#}
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>FOS User</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    {% if app.user %}
+                        <li><a href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out"></i>Logout</a></li>
+                    {% else %}
+                        <li class="active"><a href="{{ path('fos_user_security_login') }}"><i class="fa fa-sign-in"></i>Login</a></li>
+                    {% endif %}
                 </ul>
             </li>
             {#<li class="treeview">#}

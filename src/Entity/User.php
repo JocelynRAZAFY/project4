@@ -23,12 +23,12 @@ class User extends BaseUser
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $registration_date;
+    private $registrationDate;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $validation_date;
+    private $validationDate;
 
     public function __construct()
     {
@@ -43,25 +43,26 @@ class User extends BaseUser
 
     public function getRegistrationDate(): ?\DateTimeInterface
     {
-        return $this->registration_date;
+        return $this->registrationDate;
     }
 
-    public function setRegistrationDate(?\DateTimeInterface $registration_date): self
+    public function setRegistrationDate(?\DateTimeInterface $registrationDate): self
     {
-        $this->registration_date = $registration_date;
+        $this->registrationDate = $registrationDate;
 
         return $this;
     }
 
     public function getValidationDate(): ?\DateTimeInterface
     {
-        return $this->validation_date;
+        return $this->validationDate;
     }
 
-    public function setValidationDate(?\DateTimeInterface $validation_date): self
+    public function setValidationDate(?\DateTimeInterface $validationDate): self
     {
-        $this->validation_date = $validation_date;
+        $this->validationDate = $validationDate;
 
         return $this;
     }
+    
 }
