@@ -29,7 +29,7 @@ class TagsController extends AbstractController
         }
 
         return $this->render('tags/index.html.twig', [
-            'form' => $result[1]->createView()
+            'form' => $result[1]->createView(),
         ]);
     }
 
@@ -79,5 +79,17 @@ class TagsController extends AbstractController
     public function deleteArticle()
     {
         return $this->tagsManager->deleteArticle();
+    }
+
+    /**
+     * @Route("/content_prism",
+     *     defaults = { "page" = 1 },
+     *     options = { "expose" = true },
+     *     name = "content_prism",
+     * )
+     */
+    public function contentPrism()
+    {
+        return $this->tagsManager->contentPrism();
     }
 }

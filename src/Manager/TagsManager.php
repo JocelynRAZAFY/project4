@@ -90,10 +90,27 @@ class TagsManager extends BaseManager
         return $result;
     }
 
+    /**
+     * @return JsonResponse
+     */
     public function deleteArticle()
     {
         $article = $this->articleRepository->find($this->data->id);
         $this->remove($article);
         return $this->success(['id' => $this->data->id]);
+    }
+
+    /**
+     * @return JsonResponse
+     */
+    public function contentPrism()
+    {
+
+        $code = '<label for="exampleInputEmail1">Email address</label>';
+        $result = [
+            'code' => $code,
+            'language' => 'markup',
+        ];
+        return $this->success($result);
     }
 }

@@ -59,6 +59,11 @@ $(document).ready(function(){
             require('../tagsinput/src/bootstrap-tagsinput');
            Bloodhound = require('../tagsinput/dist/typeahead.bundle');
             require('./tags-input');
+            require('../prism/prism.css')
+         //   require('../prism/prism.js')
+            Prism = require('prismjs')
+            require('../prism/myprism')
+            require('../prism/components')
             break;
 
         default:
