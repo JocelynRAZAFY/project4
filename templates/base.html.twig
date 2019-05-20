@@ -28,6 +28,10 @@
     </div>
 
         {% block javascripts %}
+            {% set route = app.request.attributes.get('_route') %}
+            <script type="text/javascript">
+                var yourRoute = '{{ route }}';
+            </script>
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>

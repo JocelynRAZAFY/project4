@@ -3,10 +3,6 @@
 {% block title %}Hello CollectionController!{% endblock %}
 
 {% block body %}
-    {% set route = app.request.attributes.get('_route') %}
-    <script type="text/javascript">
-        var yourRoute = '{{ route }}';
-    </script>
 
     {% if app.request.attributes.get('_route') == 'add_collection' %}
         {% include'collection/addCollection.html.twig' %}
