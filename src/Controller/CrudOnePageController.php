@@ -4,12 +4,14 @@ namespace App\Controller;
 
 use App\Manager\CrudOnePageManager;
 use App\Repository\VilleRepository;
+use App\Services\TestProducer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CrudOnePageController extends AbstractController
 {
     private $crudOnePageManager;
+
     public function __construct(CrudOnePageManager $crudOnePageManager)
     {
         $this->crudOnePageManager = $crudOnePageManager;
@@ -18,9 +20,11 @@ class CrudOnePageController extends AbstractController
     /**
      * @Route("/crud/one/page", name="crud_one_page")
      */
-    public function index(VilleRepository $villeRepository)
+    public function index(VilleRepository $villeRepository, TestProducer $testProducer)
     {
-
+        $rabbitMessage = json_encode(['lastname' => 'RAZAFIMAHARO', 'firstname' => 'Jocelyn']);
+        $testProducer->setContentType('application/json');
+        $testProducer->publish($rabbitMessage);
         return $this->render('crud_one_page/index.html.twig', []);
     }
 
