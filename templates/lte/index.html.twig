@@ -12,4 +12,8 @@
         {% include'home/home.html.twig' %}
     {% endif %}
 
+    {% if app.request.attributes.get('_route') == 'connected' %}
+        {% include'lte/connected.html.twig' %}
+    {% endif %}
+
 {% endblock %}

@@ -59,9 +59,7 @@ class VilleCommand extends Command
     {
         $debutExec = new \DateTime('now');
         $io->success($debutExec->format('i:h:s'));
-//        $this->viderTable();
         $connection = $this->em->getConnection();
-        //  $file = 'C:/wamp/www/bba-fec/web/upload/test__.txt';
         $sql = "LOAD DATA INFILE '$file' INTO TABLE ville CHARACTER SET UTF8
                 FIELDS TERMINATED BY ';' 
                 LINES TERMINATED BY '\\n'
