@@ -1,0 +1,46 @@
+<style>
+    table.table-test td .update {
+        display: none;
+    }
+    table.table-test td .cancel {
+        display: none;
+    }
+
+</style>
+<table class="table table-bordered table-test">
+    <thead>
+    <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Article Name</th>
+        <th scope="col">Author</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Option</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for test in tests %}
+        <tr>
+            <td scope="row">{{ test.day }}</td>
+            <td>{{ test.article }}</td>
+            <td>{{ test.author }}</td>
+            <td>{{ test.shares }}</td>
+            <td></td>
+            <td>
+                <button type="button" class="update btn btn-primary btn-sm" data-toggle="tooltip">
+                    <i class="fa fa-check"></i>
+                </button>
+                <button type="button" class="cancel btn btn-warning btn-sm" data-toggle="tooltip">
+                    <i class="fa fa-remove"></i>
+                </button>
+                <button type="button" class="edit-test btn btn-success btn-sm" data-toggle="tooltip">
+                    <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="remove-test btn btn-danger btn-sm" data-toggle="tooltip">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

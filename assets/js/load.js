@@ -65,7 +65,10 @@ $(document).ready(function(){
             require('../prism/myprism')
             require('../prism/components')
             break;
-
+        case 'table_dynamic':
+            require('./original.js')
+            require('./test.js')
+            break;
         default:
 
     }
