@@ -65,7 +65,9 @@ $(document).ready(function(){
             require('../prism/myprism')
             require('../prism/components')
             break;
-
+        case'leaflet':
+            require('./leaflet.js')
+            break;
         default:
 
     }
