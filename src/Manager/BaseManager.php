@@ -78,7 +78,7 @@ abstract class BaseManager
         $this->em = $em;
         $this->container = $container;
         $this->request = $requestStack->getCurrentRequest();
-        $this->data = json_decode($this->request->getContent());
+        $this->data = $this->request != null ? json_decode($this->request->getContent()) : [];
         $this->formData = $this->request->request->all();
         $this->session = $session;
         $this->files = $this->request->files->all();

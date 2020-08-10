@@ -1,68 +1,40 @@
 <?php
-// src/Entity/User.php
 
 namespace App\Entity;
 
-use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
- * @ORM\Table(name="user")
+ * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User extends BaseUser
+class User
 {
-
     /**
-     * @ORM\Id
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    private $id;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
+     * @ORM\Column(type="string", length=256, nullable=true)
      */
-    private $registrationDate;
-
-    /**
-     * @ORM\Column(type="datetime", nullable=true)
-     */
-    private $validationDate;
-
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-    }
+    private $prenom;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getRegistrationDate(): ?\DateTimeInterface
+    public function getPrenom(): ?string
     {
-        return $this->registrationDate;
+        return $this->prenom;
     }
 
-    public function setRegistrationDate(?\DateTimeInterface $registrationDate): self
+    public function setPrenom(?string $prenom): self
     {
-        $this->registrationDate = $registrationDate;
+        $this->prenom = $prenom;
 
         return $this;
     }
-
-    public function getValidationDate(): ?\DateTimeInterface
-    {
-        return $this->validationDate;
-    }
-
-    public function setValidationDate(?\DateTimeInterface $validationDate): self
-    {
-        $this->validationDate = $validationDate;
-
-        return $this;
-    }
-    
 }

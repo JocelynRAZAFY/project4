@@ -16,4 +16,5 @@ Routing.setRoutingData(routes);
 require('../../lte/dist/js/adminlte.min.js');
 require('../../lte/dist/js/demo.js');
 require('../js/load.js');
+require('../js/presence.js');
 

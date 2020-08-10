@@ -3,6 +3,6 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-      ville: '@App\Repository\VilleRepository'
-      contact: '@App\Repository\ContactRepository'
-      article: '@App\Manager\TagsManager'
+#      ville: '@App\Repository\VilleRepository'
+#      contact: '@App\Repository\ContactRepository'
+#      article: '@App\Manager\TagsManager'

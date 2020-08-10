@@ -10,17 +10,23 @@ Steps:
     
     - npm install  
     
-    - yarn encore dev --watch  
+    - yarn watch
     
     - php bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
     
     - php bin/console rabbitmq:consumer test
     
-docker:
+Symfony lunch docker:
+
+    - Install Docker
+    
+    - Install `docker-compose`
     
     - docker-compose up -d (pour demarrer les containers )
     
     - docker-compose down (pour arrêter les containers)
     
-    
+Symfony Local Web Server:
+
+    - symfony server:start
     

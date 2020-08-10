@@ -1,9 +1,0 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello LteController!{% endblock %}
-
-{% block body %}
-    {% if app.request.attributes.get('_route') == 'index' %}
-        {% include'home/home.html.twig' %}
-    {% endif %}
-{% endblock %}
